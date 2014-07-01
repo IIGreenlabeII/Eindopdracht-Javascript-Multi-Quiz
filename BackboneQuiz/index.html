@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi Serie Quiz</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+</head>
+<body>
+<div id="holder">
+<h1>Multi Series Quiz</h1>
+<p>A quiz about television series</p>
+
+<div id="question">
+
+</div>
+
+<div id="feedback">
+
+</div>
+
+<div id="end">
+
+</div>
+
+<div id="results">
+
+</div>
+
+<script id="questionTemplate" type="text/template">
+
+    <div class="buttons">
+        <button class="prevButton btn btn-primary">Previous Question!</button>
+        <button class="resetButton btn btn-primary">Reset Quiz</button>
+    </div>
+    <br/>
+    <%= serie %>
+    <br/>
+    <br/><strong><%= id %>. <%= question %></strong><br/><br/>
+    <% _.each( options, function( option ) { %>
+    <label class="radio">
+        <input type="radio" name="options" value="<%= option %>">
+        <%= option %>
+    </label>
+    <br/>
+    <% }); %>
+    <br/> <%= answer %>
+    <div class="buttons">
+        <button class="checkResult btn btn-primary">Check Results</button>
+        <button class="nextQuestion btn btn-primary">Next Question</button>
+        <button class="endQuiz btn btn-primary">Next Question</button>
+    </div>
+    <br/>
+
+</script>
+
+<script id="feedbackTemplate" type="text/template">
+
+    <%= title %>. <%= feedback %>.
+
+</script>
+
+<script id="correctTemplate" type="text/template">
+
+    <%= title %>. <%= feedback %>.
+
+</script>
+
+<script id="resultTemplate" type="text/template">
+
+    <%= title %>. <%= series %>.
+
+</script>
+</div>
+</body>
+<script src="js/init.js" type="text/javascript"></script>
+<script src="js/models/Question.js" type="text/javascript"></script>
+<script src="js/models/CorrectAnswer.js" type="text/javascript"></script>
+<script src="js/models/WrongAnswer.js" type="text/javascript"></script>
+<script src="js/models/Result.js" type="text/javascript"></script>
+<script src="js/collections/Questions.js" type="text/javascript"></script>
+<script src="js/routers/QuestionId.js" type="text/javascript"></script>
+<script src="js/views/QuestionView.js" type="text/javascript"></script>
+<script src="js/views/CorrectAnswerView.js" type="text/javascript"></script>
+<script src="js/views/WrongAnswerView.js" type="text/javascript"></script>
+<script src="js/views/ResultView.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</html>

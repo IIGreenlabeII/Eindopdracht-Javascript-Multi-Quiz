@@ -1,0 +1,33 @@
+body{
+    background-image: url("../images/grey_wash_wall.png");
+    color: #ffffff;
+}
+
+#holder{
+    height: 500px;
+    width: 400px;
+    background-image: url("../images/pool_table.png");
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, p{
+    text-align: center;
+    color: #ffffff;
+}
+
+#question{
+    display: block;
+}
+
+#feedback, #end{
+    display: none;
+}
+
+.resetButton, .nextQuestion, .endQuiz{
+    display: none;
+}
+
+.prevButton{
+    display: block;
+}
