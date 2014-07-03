@@ -1,5 +1,6 @@
 //Model for the Questions
 quiz.models.Question = Backbone.Model.extend({
+    //Default values
     defaults: {
         title: '',
         score: 0,

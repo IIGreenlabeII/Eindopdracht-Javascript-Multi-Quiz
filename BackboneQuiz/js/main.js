@@ -6,10 +6,10 @@
         var correctAnswer = new quiz.models.CorrectAnswer();
         var result = new quiz.models.Result();
 
-        new quiz.views.QuestionView({el: '#question', router: questionRouter, collection: questions});
-        new quiz.views.WrongAnswerView({el: '#feedback', model: wrongAnswer});
-        new quiz.views.CorrectAnswerView({el: '#results', model: correctAnswer});
-        new quiz.views.ResultView({el: '#end', model: result});
+        new quiz.views.QuestionView({el: '#question', router: questionRouter, collection: questions});      //Question view
+        new quiz.views.WrongAnswerView({el: '#feedback', model: wrongAnswer});      //Wrong answer view
+        new quiz.views.CorrectAnswerView({el: '#results', model: correctAnswer});   //Correct answer view
+        new quiz.views.ResultView({el: '#end', model: result});     //Result view
 
         Backbone.history.start();
     };
